@@ -1,4 +1,4 @@
 node_modules/*
 package-lock.json
 dist/*
-utils/dbConfig.ts
+/utils/dbConfig.ts
