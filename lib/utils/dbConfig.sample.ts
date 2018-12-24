@@ -5,5 +5,5 @@ export const sequelize = new Sequelize({
   password: "password",
   database: "some_database",
   dialect: "mysql",
-  modelPaths: [__dirname + '../models']
+  modelPaths: [__dirname + '/../models']
 });
