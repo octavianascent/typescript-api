@@ -3,7 +3,7 @@ import {
   Table, Column,
   Model, HasMany,
   BeforeCreate, AutoIncrement,
-  PrimaryKey, CreatedAt, UpdatedAt, DeletedAt
+  PrimaryKey, CreatedAt, UpdatedAt, DeletedAt, Unique
 } from 'sequelize-typescript';
 
 @Table({
@@ -17,7 +17,7 @@ export default class User extends Model <User> {
   @Column
   id: number;
 
-
+  @Unique
   @Column
   email: string
 

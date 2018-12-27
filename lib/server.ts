@@ -6,7 +6,7 @@ const PORT = 5000;
 
 (async () => {
   try {
-    await sequelize.sync({force: true});
+    await sequelize.sync();
   } catch (e) {
     console.log(e);
   }
