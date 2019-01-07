@@ -11,7 +11,6 @@ import {
   timestamps: true
 })
 export default class User extends Model <User> {
-
   @PrimaryKey
   @AutoIncrement
   @Column
@@ -36,5 +35,9 @@ export default class User extends Model <User> {
   @BeforeCreate
   static hashPassword (instance: User) {
     instance.password = bcrypt.hashSync(instance.password, 12);
+  }
+
+  async comparePasswords (password) {
+    return await bcrypt.compare(password, this.password) || false;
   }
 };

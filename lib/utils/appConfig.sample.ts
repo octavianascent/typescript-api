@@ -7,3 +7,5 @@ export const sequelize = new Sequelize({
   dialect: "mysql",
   modelPaths: [__dirname + '/../models']
 });
+
+export const tokenSecret = '9idaopkdoaijduiw84iqsdm,cnmdscn1i23434943242msdasds89' // <-- change this text
